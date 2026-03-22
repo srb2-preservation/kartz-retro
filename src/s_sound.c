@@ -887,7 +887,7 @@ void S_UpdateSounds(void)
 	else
 		MPos.fFront = 0.0l;
 	MPos.fTop = 0.0l;
-	I_UpdateMumble(&MPos);
+	//I_UpdateMumble(&MPos);
 
 #ifdef HW3SOUND
 	if (hws_mode != HWS_DEFAULT_MODE)

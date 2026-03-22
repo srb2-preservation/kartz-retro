@@ -957,7 +957,7 @@ static void IdentifyVersion(void)
 	char *srb2wad1, *srb2wad2;
 	const char *srb2waddir = NULL;
 
-#if defined (__unix__) || defined (UNIXCOMMON) || defined (SDL)
+#if defined (__unix__) || defined (UNIXCOMMON) || defined (SDL) || defined (SDL2)
 	// change to the directory where 'srb2.srb' is found
 	srb2waddir = I_LocateWad();
 #endif
@@ -1426,7 +1426,7 @@ void D_SRB2Main(void)
 	R_RegisterEngineStuff();
 	S_RegisterSoundStuff();
 
-	I_RegisterSysCommands();
+	//I_RegisterSysCommands();
 #ifdef RIDERS
 	Rider_Init();
 #endif
@@ -1440,7 +1440,7 @@ void D_SRB2Main(void)
 	if (!M_CheckParm("-resetdata"))
 		G_LoadGameData();
 
-#if defined (__unix__) || defined (UNIXCOMMON) || defined (SDL)
+#if defined (__unix__) || defined (UNIXCOMMON) || defined (SDL) || defined (SDL2)
 	VID_PrepareModeList(); // Regenerate Modelist according to cv_fullscreen
 #endif
 
