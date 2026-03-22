@@ -34,7 +34,7 @@ extern boolean moviemode;
 #define CONFIGFILENAME "srb2dc.cfg"
 #elif defined (PSP)
 #define CONFIGFILENAME "srb2psp.cfg"
-#elif RIDERS
+#elif defined (RIDERS)
 #define CONFIGFILENAME "Riders.cfg"
 #else
 #define CONFIGFILENAME "config.cfg"
